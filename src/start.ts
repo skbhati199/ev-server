@@ -30,6 +30,7 @@ import SchedulerManager from './scheduler/SchedulerManager';
 import SoapCentralSystemServer from './server/ocpp/soap/SoapCentralSystemServer';
 import StorageConfiguration from './types/configuration/StorageConfiguration';
 import Utils from './utils/Utils';
+import dash from 'appmetrics-dash';
 import global from './types/GlobalType';
 
 const MODULE_NAME = 'Bootstrap';
@@ -125,6 +126,8 @@ export default class Bootstrap {
       // Start Monitoring Server
       // -------------------------------------------------------------------------
       if (Bootstrap.monitoringConfig) {
+        // Start App Metrics
+        dash.monitor();
         // Create server instance
         Bootstrap.monitoringServer = MonitoringServerFactory.getMonitoringServerImpl(Bootstrap.monitoringConfig);
         // Start server instance
