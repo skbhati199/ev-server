@@ -133,7 +133,7 @@
     "mjml": "^4.13.0",
     "moment": "^2.29.4",
     "moment-duration-format": "^2.3.2",
-    "moment-timezone": "^0.5.38",
+    "moment-timezone": "^0.5.45",
     "mongo-sanitize": "^1.1.0",
     "mongo-uri-builder": "^4.0.0",
     "mongodb": "^4.11.0",
